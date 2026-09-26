@@ -1,0 +1,6 @@
+# Python packages needed to run the Jupyter notebooks
+#   pip install -r requirements.txt
+#   jupyter notebook
+numpy>=1.24
+matplotlib>=3.7
+jupyter>=1.0

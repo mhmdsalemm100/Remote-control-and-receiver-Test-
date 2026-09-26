@@ -1,0 +1,19 @@
+# Host simulation test binaries
+tests/build/
+
+# Arduino build output
+build/
+*.hex
+*.elf
+
+# Jupyter / Python
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

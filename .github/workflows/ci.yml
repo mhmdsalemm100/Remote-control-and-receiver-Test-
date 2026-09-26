@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  compile-sketches:
+    name: Compile sketches for Arduino Mega 2560
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: arduino/compile-sketches@v1
+        with:
+          fqbn: arduino:avr:mega
+          enable-warnings-report: true
+          sketch-paths: |
+            - 01_Telemetry_Radio_Communication
+            - 02_FlySky_Receiver_Health_Test
+
+  host-simulation-tests:
+    name: Host simulation tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build and run the simulation tests
+        run: make -C tests
