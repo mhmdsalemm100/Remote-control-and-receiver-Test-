@@ -1,9 +1,9 @@
-# Remote Control & Receiver Test — Arduino Mega Test Bench
+# Remote Control & Receiver Test  Arduino Mega Test Bench
 
 [![CI](https://github.com/mhmdsalemm100/Remote-control-and-receiver-Test-/actions/workflows/ci.yml/badge.svg)](https://github.com/mhmdsalemm100/Remote-control-and-receiver-Test-/actions/workflows/ci.yml)
 
-Two bench experiments that verify the radio links of a drone project **before** any flight hardware
-(Pixhawk, ESCs, motors, propellers) is connected. Both use an **Arduino Mega 2560** and the Arduino IDE
+Two bench experiments that verify the radio links of a drone project **before**  any flight hardware
+(Pixhawk, ESCs, motors, propellers) is connected. Both use an **Arduino Mega 2560**  and the Arduino IDE
 Serial Monitor.
 
 | # | Project | What it tests | Explanation paper (Jupyter) |
@@ -20,7 +20,7 @@ Serial Monitor.
 
 ## Repository structure
 
-Every program is in its **own file and folder** (the Arduino IDE requires the folder name to match the
+Every program is in its  **own file and folder** (the Arduino IDE requires the folder name to match the
 `.ino` file name).
 
 ```text
@@ -46,7 +46,7 @@ Every program is in its **own file and folder** (the Arduino IDE requires the fo
 
 ## Quick start
 
-### Project 1 — Telemetry text communication
+### Project 1 —  Telemetry text communication
 
 1. Wire each radio to its Arduino Mega: **radio TX → RX1 (pin 19)**, **radio RX → TX1 (pin 18)**, GND → GND, 5V → 5V (5 V radios only).
 2. Upload `telemetry_sender.ino` to Arduino #1 and `telemetry_receiver.ino` (or `telemetry_receiver_status.ino`) to Arduino #2.
@@ -76,12 +76,12 @@ Arduino #2:  TELEMETRY CONNECTED / DATA RECEIVED
 ## Reading and running the notebooks
 
 GitHub shows the notebooks directly in the browser (with all diagrams). To run them yourself:
-
+ 
 ```bash
 pip install -r requirements.txt
 jupyter notebook
 ```
-
+ 
 ## How the code was checked
 
 * **Code review** of every line — all findings and fixes are listed in [CODE_REVIEW.md](CODE_REVIEW.md).
@@ -97,7 +97,7 @@ jupyter notebook
 * **Simulation tests on a PC** ([tests/](tests)): the real `.ino` files run against a simulated radio link
   and a simulated transmitter/receiver with a "virtual operator" — 11 telemetry tests and 12 FlySky
   scenarios, including broken wires, lost links and different failsafe modes. Run them with:
-
+ 
   ```bash
   make -C tests
   ```
